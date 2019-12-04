@@ -37,6 +37,14 @@ namespace BLL
             return dao.SelectAll("tbl_veiculo");
         }
 
+        public DataTable ListarVeiculo(int id)
+        {
+            return dao.SelectWhere("tbl_veiculo", $"id = '{id}'");
+        }
+        {
+
+        }
+
 
     }
 }

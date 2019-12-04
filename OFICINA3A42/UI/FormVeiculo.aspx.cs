@@ -8,6 +8,8 @@ using BLL;
 using DTO;
 using System.Data;
 
+
+
 namespace OFICINA3A42.UI
 {
     public partial class FormVeiculo : System.Web.UI.Page
@@ -52,6 +54,7 @@ namespace OFICINA3A42.UI
             new VeiculoBLL().AlterarVeiculo(dto);
             dtgDados .EditIndex = -1;
             ExibeDados();
+            
 
         }
 
@@ -82,6 +85,7 @@ namespace OFICINA3A42.UI
             try
             {
                 VeiculoDTO VeiculoDTO = new VeiculoDTO();
+              
 
                 VeiculoDTO.Placa = txtPlaca.Text;
                 VeiculoDTO.Ano = txtAno.Text;
@@ -97,6 +101,7 @@ namespace OFICINA3A42.UI
 
                 ExibeDados();
                 Response.Write("<script> alert('Dados gravador com sucesso!!')</script>");
+          
 
             }
             catch (Exception ex)
